@@ -1,0 +1,64 @@
+openapi: 3.0.0
+info:
+  title: API Sample
+  version: '1.0'
+  description: null
+servers:
+  - url: 'http://localhost:3000'
+    description: Local
+tags:
+  - name: api_app
+    x-displayName: API for app
+    description: null
+  - name: model_component
+    x-displayName: Component Models
+    description: |
+      ## User
+      <SchemaDefinition schemaRef="#/components/schemas/User" />
+  - name: model_request
+    x-displayName: Request Models
+    description: null
+  - name: model_response
+    x-displayName: Response Models
+    description: |
+      ## MeGetResponse
+      <SchemaDefinition schemaRef="#/components/schemas/MeGetResponse" />
+x-tagGroups:
+  - name: APIs
+    tags:
+      - api_app
+  - name: Models
+    tags:
+      - model_component
+      - model_request
+      - model_response
+paths:
+  /me:
+    get:
+      summary: 認証ユーザー情報
+      tags:
+        - api_app
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeGetResponse'
+      operationId: get-me
+      description: ''
+      security:
+        - ApiToken: []
+components:
+  schemas:
+    MeGetResponse:
+      $ref: './schemas.yaml#/components/schemas/User'
+  securitySchemes:
+    ApiToken:
+      type: http
+      scheme: bearer
+      description: |-
+        ```
+        Headers:
+          Authorization: "Bearer <token>"
+        ```

@@ -1,12 +1,15 @@
-# NIKKEI SCORE API仕様書
+# OpenAPI Boilerplate
 
-OpenAPI(Swagger)を使って記述しています。[Stoplight Studio](https://stoplight.io/)を使って編集することをおすすめします。
+## Editor
+
+- [Stoplight Studio](https://stoplight.io/)
 
 ## Build
 
 ### Preparation
 
-[openapi-ext-tools](https://github.com/t2y/openapi-ext-tools)、[ReDoc](https://github.com/Redocly/redoc)を使って公開用ページを作成しているので、予めインストールしてください。
+- [openapi-ext-tools](https://github.com/t2y/openapi-ext-tools)
+- [ReDoc](https://github.com/Redocly/redoc)
 
 ```
 npm install -g redoc-cli
