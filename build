@@ -5,10 +5,5 @@ OUT=./.output/bundled_openapi.yaml
 openapi-spec-cli --spec-path ./reference/openapi.yaml --bundled-spec-path $OUT
 openapi-redoc-schema-def --path $OUT --tags model_component model_request model_response
 
-if [ -d ./docs/api ]; then
-  rm -r ./docs/api
-fi
-
 mkdir -p ./docs/api
-redoc-cli bundle $OUT
-mv redoc-static.html ./docs/api/index.html
+redoc-cli bundle $OUT -o ./docs/api/index.html

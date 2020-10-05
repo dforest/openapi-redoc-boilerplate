@@ -8,16 +8,15 @@
 
 ### Preparation
 
-- [openapi-ext-tools](https://github.com/t2y/openapi-ext-tools)
 - [ReDoc](https://github.com/Redocly/redoc)
+- [openapi-ext-tools](https://github.com/t2y/openapi-ext-tools)
+- [openapi-redoc-schema-def](https://github.com/dforest/openapi-redoc-schema-def)
 
 ```
 npm install -g redoc-cli
-pip install openapi-ext-tools
 
-cd path/to/project
-cd script
-pip install -e ./script
+pip install openapi-ext-tools
+pip install git+https://github.com/dforest/openapi-redoc-schema-def
 ```
 
 ### Execution
