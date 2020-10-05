@@ -20,3 +20,5 @@ components:
       required:
         - id
         - name
+      x-tags:
+        - model_component

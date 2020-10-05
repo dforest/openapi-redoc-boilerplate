@@ -1,6 +1,4 @@
-bundled_openapi.yaml
-
-### https://raw.github.com/github/gitignore/50e42aa1064d004a5c99eaa72a2d8054a0d8de55/Global/macOS.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/macOS.gitignore
 
 # General
 .DS_Store
@@ -8,8 +6,7 @@ bundled_openapi.yaml
 .LSOverride
 
 # Icon must end with two \r
-Icon
-
+Icon
 
 # Thumbnails
 ._*

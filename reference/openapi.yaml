@@ -53,6 +53,8 @@ components:
   schemas:
     MeGetResponse:
       $ref: './schemas.yaml#/components/schemas/User'
+      x-tags:
+        - model_response
   securitySchemes:
     ApiToken:
       type: http

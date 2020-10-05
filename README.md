@@ -14,6 +14,10 @@
 ```
 npm install -g redoc-cli
 pip install openapi-ext-tools
+
+cd path/to/project
+cd script
+pip install -e ./script
 ```
 
 ### Execution
