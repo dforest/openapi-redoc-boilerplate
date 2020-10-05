@@ -16,10 +16,10 @@ def main():
     sources = {}
 
     for k, v in schemas.items():
-        for tag in v.get("tags", []):
-            if tag in data.tags:
-                source = sources.get(tag, [])
-                sources[tag].update(source.append({'key': k, 'title': v.get('title', k)}))
+        for tag in v.get('x-tags', []):
+            if tag in args.tags:
+                sources.setdefault(tag, [])
+                sources.get(tag).append({'key': k, 'title': v.get('title', k)})
 
     tags = data.get('tags')
     for tag in tags:
@@ -28,7 +28,7 @@ def main():
             description.append('## {}'.format(source.get('title')))
             description.append('<SchemaDefinition schemaRef="#/components/schemas/{}" />'.format(source.get('key')))
             description.append('')
-        tag['description'] = '/n'.join(list(filter(None, description)))
+        tag['description'] = '\n'.join(list(filter(None, description)))
 
     write_to_yaml(data, args.path)
 
