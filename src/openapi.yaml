@@ -11,16 +11,16 @@ servers:
 tags:
   - name: api_app
     x-displayName: API for app
-    description: null
+    description: ""
   - name: model_component
     x-displayName: Component Models
-    description: null
+    description: ""
   - name: model_request
     x-displayName: Request Models
-    description: null
+    description: ""
   - name: model_response
     x-displayName: Response Models
-    description: null
+    description: ""
 x-tagGroups:
   - name: APIs
     tags:
