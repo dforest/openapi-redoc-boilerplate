@@ -1,6 +1,6 @@
 #!/bin/sh
 
-OUT=./temp/bundled_openapi.yaml
+OUT=./tmp/bundled_openapi.yaml
 
 openapi-spec-cli --spec-path ./src/openapi.yaml --bundled-spec-path $OUT
 openapi-redoc-schema-def --path $OUT --tags model_component model_request model_response
